@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GST Calculator - Calculate GST Amount Online Free | MEGA STORE</title>
+  <meta name="description" content="Free online GST calculator for India. Calculate GST inclusive and exclusive amounts with all GST tax rates.">
+  <meta name="keywords" content="GST calculator, India GST, calculate GST, GST amount, GST tax calculator, goods and services tax">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mega-store.in/tools/gst-calculator.html">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="logo">MEGA STORE</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/tools/pdf-merger.html">PDF Tools</a></li>
+        <li><a href="/tools/image-compressor.html">Image Tools</a></li>
+        <li><a href="/tools/emi-calculator.html">Calculators</a></li>
+        <li><a href="/tools/qr-code-generator.html">Generators</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+        <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="icon-btn" id="mobile-menu-close" style="position:absolute;top:16px;right:16px;" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="/">Home</a><a href="/">Tools</a><a href="/contact.html">Contact</a>
+  </div>
+  <main id="main-content">
+    <div class="breadcrumb"><div class="container"><a href="/">Home</a><span class="separator">/</span><span>GST Calculator</span></div></div>
+    <div class="tool-page">
+      <div class="container">
+        <div class="tool-layout">
+          <div class="tool-main">
+            <div class="tool-interface reveal">
+              <div class="tool-interface-header">
+                <div class="tool-icon-large" style="background:linear-gradient(135deg,rgba(219,39,119,0.1),rgba(219,39,119,0.05));">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#db2777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                </div>
+                <div><h1>GST Calculator</h1><p>Calculate GST inclusive and exclusive amounts</p></div>
+              </div>
+              <div class="checkbox-group" style="margin-bottom:20px;">
+                <label class="checkbox-item"><input type="radio" name="gst-mode" value="exclusive" checked> Add GST (Exclusive)</label>
+                <label class="checkbox-item"><input type="radio" name="gst-mode" value="inclusive"> Remove GST (Inclusive)</label>
+              </div>
+              <div class="form-group" style="margin-bottom:20px;">
+                <label for="amount">Amount (Rs.)</label>
+                <input type="number" id="amount" placeholder="1000" min="0" step="0.01" style="width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--radius-md);background:var(--bg-card);font-size:1rem;">
+              </div>
+              <div class="form-group" style="margin-bottom:20px;">
+                <label for="gst-rate">GST Rate</label>
+                <select id="gst-rate" style="width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--radius-md);background:var(--bg-card);font-size:1rem;">
+                  <option value="5">5%</option>
+                  <option value="12">12%</option>
+                  <option value="18" selected>18%</option>
+                  <option value="28">28%</option>
+                </select>
+              </div>
+              <button class="btn btn-primary btn-lg" id="calculate-btn" style="width:100%;margin-bottom:20px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Calculate GST</button>
+              <div id="result-area" style="display:none;">
+                <div class="results-area">
+                  <h3 style="margin-bottom:16px;">GST Breakdown</h3>
+                  <div class="stats-grid" style="grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px;">
+                    <div class="stat-item"><span class="stat-number" id="original-amount" style="font-size:1.5rem;">-</span><span class="stat-label" id="original-label">Base Amount</span></div>
+                    <div class="stat-item"><span class="stat-number" id="gst-amount" style="font-size:1.5rem;color:var(--accent-blue);">-</span><span class="stat-label">GST Amount</span></div>
+                    <div class="stat-item"><span class="stat-number" id="total-amount" style="font-size:1.5rem;">-</span><span class="stat-label" id="total-label">Total Amount</span></div>
+                  </div>
+                  <div style="padding:12px;background:var(--bg-secondary);border-radius:8px;font-size:0.875rem;">
+                    <p><strong>CGST (Central):</strong> <span id="cgst">-</span> at <span id="cgst-rate">-</span>%</p>
+                    <p><strong>SGST (State):</strong> <span id="sgst">-</span> at <span id="sgst-rate">-</span>%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tool-info-section reveal"><h2>How to Use</h2><ol><li>Select whether you want to add GST or remove GST from amount</li><li>Enter the amount in rupees</li><li>Select the applicable GST rate (5%, 12%, 18%, or 28%)</li><li>Click 'Calculate GST'</li><li>View the breakdown including CGST and SGST components</li></ol></div>
+            <div class="tool-info-section reveal"><h2>Features</h2><ul><li>Calculate GST inclusive and exclusive amounts</li><li>All GST rates supported (5%, 12%, 18%, 28%)</li><li>Automatic CGST and SGST split</li><li>Instant calculation</li><li>100% free</li></ul></div>
+            <div class="tool-info-section reveal"><h2>Benefits</h2><p>Essential for businesses, accountants, and shoppers in India. Quickly determine the exact GST component in any transaction, or compute the final price including GST.</p></div>
+            <div class="tool-info-section reveal"><h2>Frequently Asked Questions</h2><div class="accordion"><div class="accordion-item"><button class="accordion-header">What GST rates are supported? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="accordion-body"><p>All major GST rates: 5%, 12%, 18%, and 28% as per Indian GST law.</p></div></div><div class="accordion-item"><button class="accordion-header">How is CGST/SGST split? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="accordion-body"><p>GST is equally divided into CGST (Central) and SGST (State), each being half of the total GST rate.</p></div></div></div></div>
+          </div>
+          <aside class="tool-sidebar"><div class="sidebar-widget reveal"><h3>Related Tools</h3><a href="/tools/emi-calculator.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">EMI Calculator</span></a><a href="/tools/age-calculator.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">Age Calculator</span></a><a href="/tools/unit-converter.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">Unit Converter</span></a></div></aside>
+        </div>
+      </div>
+    </div>
+  </main>
+<footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/" class="logo">MEGA STORE</a><p>Your all-in-one platform for free online tools.</p></div>
+        <div class="footer-column"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+        <div class="footer-column"><h4>Tools</h4><ul><li><a href="/tools/pdf-merger.html">PDF Merger</a></li><li><a href="/tools/image-compressor.html">Image Compressor</a></li><li><a href="/tools/qr-code-generator.html">QR Code</a></li></ul></div>
+        <div class="footer-column"><h4>Legal</h4><ul><li><a href="/privacy-policy.html">Privacy</a></li><li><a href="/terms-and-conditions.html">Terms</a></li><li><a href="/disclaimer.html">Disclaimer</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>MEGA STORE. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+<script>
+    (function(){
+      const amount=document.getElementById("amount"),gstRate=document.getElementById("gst-rate"),calculateBtn=document.getElementById("calculate-btn"),resultArea=document.getElementById("result-area");
+      calculateBtn.addEventListener("click",()=>{
+        const amt=parseFloat(amount.value),rate=parseFloat(gstRate.value);
+        if(!amt){alert("Please enter an amount");return;}
+        const mode=document.querySelector('input[name="gst-mode"]:checked').value;
+        let base,gst,total;
+        if(mode==="exclusive"){base=amt;gst=amt*rate/100;total=amt+gst;}
+        else{total=amt;base=amt/(1+rate/100);gst=amt-base;}
+        document.getElementById("original-amount").textContent="Rs. "+base.toLocaleString("en-IN",{maximumFractionDigits:2});
+        document.getElementById("gst-amount").textContent="Rs. "+gst.toLocaleString("en-IN",{maximumFractionDigits:2});
+        document.getElementById("total-amount").textContent="Rs. "+total.toLocaleString("en-IN",{maximumFractionDigits:2});
+        document.getElementById("original-label").textContent=mode==="exclusive"?"Base Amount":"Amount (excl. GST)";
+        document.getElementById("total-label").textContent=mode==="exclusive"?"Total (incl. GST)":"Amount (incl. GST)";
+        const halfGst=gst/2;const halfRate=rate/2;
+        document.getElementById("cgst").textContent="Rs. "+halfGst.toLocaleString("en-IN",{maximumFractionDigits:2});document.getElementById("cgst-rate").textContent=halfRate;
+        document.getElementById("sgst").textContent="Rs. "+halfGst.toLocaleString("en-IN",{maximumFractionDigits:2});document.getElementById("sgst-rate").textContent=halfRate;
+        resultArea.style.display="block";
+      });
+    })();
+    </script>
+</body>
+</html>

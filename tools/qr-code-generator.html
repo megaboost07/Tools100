@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator - Create QR Codes Free | MEGA STORE</title>
+  <meta name="description" content="Free online QR Code generator. Create QR codes for URLs, text, contact info, WiFi, and more. Download as PNG.">
+  <meta name="keywords" content="QR code generator, create QR code, QR code maker, free QR code, barcode generator">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mega-store.in/tools/qr-code-generator.html">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="logo">MEGA STORE</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/tools/pdf-merger.html">PDF Tools</a></li>
+        <li><a href="/tools/image-compressor.html">Image Tools</a></li>
+        <li><a href="/tools/emi-calculator.html">Calculators</a></li>
+        <li><a href="/tools/qr-code-generator.html">Generators</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+        <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="icon-btn" id="mobile-menu-close" style="position:absolute;top:16px;right:16px;" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="/">Home</a><a href="/">Tools</a><a href="/contact.html">Contact</a>
+  </div>
+  <main id="main-content">
+    <div class="breadcrumb"><div class="container"><a href="/">Home</a><span class="separator">/</span><span>QR Code Generator</span></div></div>
+    <div class="tool-page">
+      <div class="container">
+        <div class="tool-layout">
+          <div class="tool-main">
+            <div class="tool-interface reveal">
+              <div class="tool-interface-header">
+                <div class="tool-icon-large" style="background:linear-gradient(135deg,rgba(124,58,237,0.1),rgba(124,58,237,0.05));">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                </div>
+                <div><h1>QR Code Generator</h1><p>Generate QR codes for URLs, text, and more</p></div>
+              </div>
+              <div class="form-group" style="margin-bottom:20px;">
+                <label for="qr-type">QR Code Type</label>
+                <select id="qr-type" style="width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--radius-md);background:var(--bg-card);font-size:1rem;">
+                  <option value="url">Website URL</option>
+                  <option value="text">Plain Text</option>
+                  <option value="email">Email Address</option>
+                  <option value="phone">Phone Number</option>
+                  <option value="wifi">WiFi Network</option>
+                </select>
+              </div>
+              <div class="form-group" style="margin-bottom:20px;">
+                <label for="qr-content" id="qr-label">Website URL</label>
+                <input type="text" id="qr-content" placeholder="https://example.com" style="width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--radius-md);background:var(--bg-card);font-size:1rem;">
+              </div>
+              <div class="form-group" id="wifi-options" style="display:none;margin-bottom:20px;">
+                <div class="input-row">
+                  <div class="form-group"><label for="wifi-ssid">Network Name (SSID)</label><input type="text" id="wifi-ssid" placeholder="WiFi Name"></div>
+                  <div class="form-group"><label for="wifi-password">Password</label><input type="text" id="wifi-password" placeholder="WiFi Password"></div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom:20px;">
+                <label for="qr-size">Size: <span id="size-val">256</span>px</label>
+                <div class="range-slider"><input type="range" id="qr-size" min="128" max="1024" value="256" step="64"></div>
+              </div>
+              <div class="actions-row" style="margin-bottom:24px;">
+                <button class="btn btn-primary" id="generate-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg> Generate QR Code</button>
+                <button class="btn btn-secondary" id="download-btn" style="display:none;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download PNG</button>
+              </div>
+              <div id="qr-result" style="text-align:center;padding:24px;background:var(--bg-secondary);border-radius:var(--radius-md);display:none;">
+                <canvas id="qr-canvas" style="max-width:100%;"></canvas>
+              </div>
+            </div>
+            <div class="tool-info-section reveal"><h2>How to Use</h2><ol><li>Select the QR code type (URL, text, email, phone, or WiFi)</li><li>Enter your content in the input field</li><li>Adjust the size slider if needed</li><li>Click 'Generate QR Code'</li><li>Download your QR code as PNG</li></ol></div>
+            <div class="tool-info-section reveal"><h2>Features</h2><ul><li>Generate QR codes for URLs, text, email, phone, WiFi</li><li>Adjustable size from 128px to 1024px</li><li>High error correction level</li><li>Download as PNG image</li><li>100% free</li></ul></div>
+            <div class="tool-info-section reveal"><h2>Benefits</h2><p>QR codes are versatile tools for marketing, contact sharing, and quick access to digital content. Use them on business cards, flyers, posters, or websites to bridge the gap between physical and digital worlds.</p></div>
+            <div class="tool-info-section reveal"><h2>Frequently Asked Questions</h2><div class="accordion"><div class="accordion-item"><button class="accordion-header">Are the QR codes permanent? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="accordion-body"><p>Yes, the generated QR codes do not expire. They encode your data directly and work forever.</p></div></div><div class="accordion-item"><button class="accordion-header">Can I use QR codes commercially? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="accordion-body"><p>Yes, all QR codes generated are free to use for personal and commercial purposes.</p></div></div></div></div>
+          </div>
+          <aside class="tool-sidebar"><div class="sidebar-widget reveal"><h3>Related Tools</h3><a href="/tools/password-generator.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">Password Generator</span></a><a href="/tools/meta-tag-generator.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">Meta Tag Generator</span></a><a href="/tools/sitemap-generator.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">Sitemap Generator</span></a></div></aside>
+        </div>
+      </div>
+    </div>
+  </main>
+<footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/" class="logo">MEGA STORE</a><p>Your all-in-one platform for free online tools.</p></div>
+        <div class="footer-column"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+        <div class="footer-column"><h4>Tools</h4><ul><li><a href="/tools/pdf-merger.html">PDF Merger</a></li><li><a href="/tools/image-compressor.html">Image Compressor</a></li><li><a href="/tools/qr-code-generator.html">QR Code</a></li></ul></div>
+        <div class="footer-column"><h4>Legal</h4><ul><li><a href="/privacy-policy.html">Privacy</a></li><li><a href="/terms-and-conditions.html">Terms</a></li><li><a href="/disclaimer.html">Disclaimer</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>MEGA STORE. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+    (function(){
+      const qrType=document.getElementById("qr-type"),qrContent=document.getElementById("qr-content"),qrLabel=document.getElementById("qr-label"),wifiOptions=document.getElementById("wifi-options"),qrSize=document.getElementById("qr-size"),sizeVal=document.getElementById("size-val"),generateBtn=document.getElementById("generate-btn"),downloadBtn=document.getElementById("download-btn"),qrResult=document.getElementById("qr-result"),qrCanvas=document.getElementById("qr-canvas");
+      let currentQR=null;
+      qrType.addEventListener("change",()=>{
+        const type=qrType.value;
+        wifiOptions.style.display=type==="wifi"?"block":"none";
+        const labels={url:"Website URL",text:"Text Content",email:"Email Address",phone:"Phone Number",wifi:"WiFi Network"};
+        qrLabel.textContent=labels[type];
+        const placeholders={url:"https://example.com",text:"Enter your text here",email:"name@example.com",phone:"+91 9876543210",wifi:""};
+        qrContent.placeholder=placeholders[type];
+      });
+      qrSize.addEventListener("input",()=>{sizeVal.textContent=qrSize.value;});
+      generateBtn.addEventListener("click",()=>{
+        const type=qrType.value;let content="";
+        if(type==="wifi"){const ssid=document.getElementById("wifi-ssid").value,pwd=document.getElementById("wifi-password").value;if(!ssid){alert("Please enter WiFi network name");return;}content=`WIFI:S:${ssid};T:WPA;P:${pwd};;`;}
+        else{content=qrContent.value;if(!content){alert("Please enter content");return;}if(type==="email")content="mailto:"+content;else if(type==="phone")content="tel:"+content;}
+        qrResult.style.display="block";qrCanvas.innerHTML="";
+        currentQR=new QRCode(qrCanvas,{text:content,width:parseInt(qrSize.value),height:parseInt(qrSize.value),colorDark:"#000000",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M});
+        downloadBtn.style.display="inline-flex";
+      });
+      downloadBtn.addEventListener("click",()=>{
+        const img=qrCanvas.querySelector("img");if(img){const a=document.createElement("a");a.href=img.src;a.download="qrcode.png";a.click();}
+      });
+    })();
+    </script>
+</body>
+</html>

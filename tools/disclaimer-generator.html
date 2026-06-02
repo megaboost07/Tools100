@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disclaimer Generator - Free Online | MEGA STORE</title>
+  <meta name="description" content="Free online disclaimer generator. Create a legal disclaimer for your website or blog in seconds.">
+  <meta name="keywords" content="disclaimer generator, create disclaimer, website disclaimer, legal disclaimer">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mega-store.in/tools/disclaimer-generator.html">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="logo">MEGA STORE</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/tools/pdf-merger.html">PDF Tools</a></li>
+        <li><a href="/tools/image-compressor.html">Image Tools</a></li>
+        <li><a href="/tools/emi-calculator.html">Calculators</a></li>
+        <li><a href="/tools/qr-code-generator.html">Generators</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+        <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="icon-btn" id="mobile-menu-close" style="position:absolute;top:16px;right:16px;" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="/">Home</a><a href="/">Tools</a><a href="/contact.html">Contact</a>
+  </div>
+  <main id="main-content">
+    <div class="breadcrumb"><div class="container"><a href="/">Home</a><span class="separator">/</span><span>Disclaimer Generator</span></div></div>
+    <div class="tool-page">
+      <div class="container">
+        <div class="tool-layout">
+          <div class="tool-main">
+            <div class="tool-interface reveal">
+              <div class="tool-interface-header">
+                <div class="tool-icon-large" style="background:linear-gradient(135deg,rgba(147,51,234,0.1),rgba(147,51,234,0.05));">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                </div>
+                <div><h1>Disclaimer Generator</h1><p>Generate a legal disclaimer for your website</p></div>
+              </div>
+              <div class="input-row">
+                <div class="form-group"><label for="company-name">Website/Business Name *</label><input type="text" id="company-name" placeholder="Your Website Name"></div>
+                <div class="form-group"><label for="website-url">Website URL *</label><input type="url" id="website-url" placeholder="https://example.com"></div>
+              </div>
+              <div class="form-group" style="margin-bottom:20px;">
+                <label for="disclaimer-type">Type of Website</label>
+                <select id="disclaimer-type" style="width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--radius-md);background:var(--bg-card);font-size:1rem;">
+                  <option value="general">General/Business</option>
+                  <option value="blog">Blog/Informational</option>
+                  <option value="affiliate">Affiliate Marketing</option>
+                  <option value="health">Health/Wellness</option>
+                  <option value="financial">Financial/Investment</option>
+                </select>
+              </div>
+              <button class="btn btn-primary btn-lg" id="generate-btn" style="width:100%;margin-bottom:20px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> Generate Disclaimer</button>
+              <div id="result-area" style="display:none;">
+                <div class="results-area">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;"><h3>Generated Disclaimer</h3><button class="btn btn-sm btn-secondary" id="copy-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> Copy</button></div>
+                  <pre id="policy-output" class="result-code" style="white-space:pre-wrap;font-family:system-ui;font-size:0.875rem;line-height:1.7;max-height:600px;"></pre>
+                  <button class="btn btn-secondary btn-sm" id="download-btn" style="margin-top:12px;"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download as HTML</button>
+                </div>
+              </div>
+            </div>
+            <div class="tool-info-section reveal"><h2>How to Use</h2><ol><li>Enter your website/business name and URL</li><li>Select the type of website</li><li>Click 'Generate Disclaimer'</li><li>Copy or download the generated disclaimer</li></ol></div>
+            <div class="tool-info-section reveal"><h2>Features</h2><ul><li>Tailored for different website types</li><li>General, blog, affiliate, health, financial options</li><li>HTML output ready to use</li><li>Download as HTML file</li><li>100% free</li></ul></div>
+            <div class="tool-info-section reveal"><h2>Benefits</h2><p>A disclaimer protects you from liability by informing visitors about the nature and limitations of the information on your website.</p></div>
+            <div class="tool-info-section reveal"><h2>Frequently Asked Questions</h2><div class="accordion"><div class="accordion-item"><button class="accordion-header">Is a disclaimer legally required? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="accordion-body"><p>While not always legally required, it's strongly recommended for all websites to limit liability.</p></div></div></div></div>
+          </div>
+          <aside class="tool-sidebar"><div class="sidebar-widget reveal"><h3>Related Tools</h3><a href="/tools/privacy-policy-generator.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">Privacy Policy Generator</span></a><a href="/tools/terms-conditions-generator.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">Terms & Conditions Generator</span></a></div></aside>
+        </div>
+      </div>
+    </div>
+  </main>
+<footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/" class="logo">MEGA STORE</a><p>Your all-in-one platform for free online tools.</p></div>
+        <div class="footer-column"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+        <div class="footer-column"><h4>Tools</h4><ul><li><a href="/tools/pdf-merger.html">PDF Merger</a></li><li><a href="/tools/image-compressor.html">Image Compressor</a></li><li><a href="/tools/qr-code-generator.html">QR Code</a></li></ul></div>
+        <div class="footer-column"><h4>Legal</h4><ul><li><a href="/privacy-policy.html">Privacy</a></li><li><a href="/terms-and-conditions.html">Terms</a></li><li><a href="/disclaimer.html">Disclaimer</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>MEGA STORE. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+<script>
+    (function(){
+      document.getElementById("generate-btn").addEventListener("click",()=>{
+        const name=document.getElementById("company-name").value,url=document.getElementById("website-url").value,type=document.getElementById("disclaimer-type").value;
+        if(!name||!url){alert("Please fill required fields");return;}
+        let disc=`<h2>Disclaimer for ${name}</h2><p><strong>Last Updated:</strong> ${new Date().toLocaleDateString("en-IN")}</p><p>The information provided on <a href="${url}">${url}</a> is for general informational purposes only.</p>`;
+        if(type==="blog"){disc+=`<p>The views and opinions expressed on this blog are those of the authors and do not necessarily reflect the official policy or position of any other agency, organization, employer, or company.</p>`;}
+        else if(type==="affiliate"){disc+=`<p>${name} participates in affiliate marketing programs. This means we may earn commissions on purchases made through our links at no additional cost to you.</p>`;}
+        else if(type==="health"){disc+=`<p>The health information on this website is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider.</p>`;}
+        else if(type==="financial"){disc+=`<p>The financial information provided is for educational purposes only and should not be construed as financial advice. Always consult with a qualified financial advisor before making investment decisions.</p>`;}
+        disc+=`<p>While we strive to keep the information up to date and correct, we make no representations or warranties of any kind about the completeness, accuracy, reliability, or availability of the website or the information.</p><p>Generated by MEGA STORE Disclaimer Generator.</p>`;
+        document.getElementById("policy-output").innerHTML=disc;document.getElementById("result-area").style.display="block";
+        document.getElementById("copy-btn").addEventListener("click",()=>{navigator.clipboard.writeText(document.getElementById("policy-output").innerText);});
+        document.getElementById("download-btn").addEventListener("click",()=>{const html=`<!DOCTYPE html><html><head><title>Disclaimer - ${name}</title></head><body>${document.getElementById("policy-output").innerHTML}</body></html>`;const blob=new Blob([html],{type:"text/html"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="disclaimer.html";a.click();});
+      });
+    })();
+    </script>
+</body>
+</html>

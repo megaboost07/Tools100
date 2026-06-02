@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice Generator - Create Professional Invoices Free | MEGA STORE</title>
+  <meta name="description" content="Free online invoice generator. Create professional invoices with your company details, items, and totals. Download as HTML.">
+  <meta name="keywords" content="invoice generator, create invoice, free invoice, professional invoice, billing generator">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mega-store.in/tools/invoice-generator.html">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="logo">MEGA STORE</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/tools/pdf-merger.html">PDF Tools</a></li>
+        <li><a href="/tools/image-compressor.html">Image Tools</a></li>
+        <li><a href="/tools/emi-calculator.html">Calculators</a></li>
+        <li><a href="/tools/qr-code-generator.html">Generators</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+        <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="icon-btn" id="mobile-menu-close" style="position:absolute;top:16px;right:16px;" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="/">Home</a><a href="/">Tools</a><a href="/contact.html">Contact</a>
+  </div>
+  <main id="main-content">
+    <div class="breadcrumb"><div class="container"><a href="/">Home</a><span class="separator">/</span><span>Invoice Generator</span></div></div>
+    <div class="tool-page">
+      <div class="container">
+        <div class="tool-layout">
+          <div class="tool-main">
+            <div class="tool-interface reveal">
+              <div class="tool-interface-header">
+                <div class="tool-icon-large" style="background:linear-gradient(135deg,rgba(202,138,4,0.1),rgba(202,138,4,0.05));">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ca8a04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                </div>
+                <div><h1>Invoice Generator</h1><p>Create professional invoices</p></div>
+              </div>
+              <div class="input-row">
+                <div class="form-group"><label for="company-name">Your Company Name *</label><input type="text" id="company-name" placeholder="Your Business"></div>
+                <div class="form-group"><label for="company-address">Your Address</label><input type="text" id="company-address" placeholder="123 Main St, City"></div>
+              </div>
+              <div class="input-row">
+                <div class="form-group"><label for="client-name">Client Name *</label><input type="text" id="client-name" placeholder="Client Company"></div>
+                <div class="form-group"><label for="invoice-date">Invoice Date</label><input type="date" id="invoice-date"></div>
+              </div>
+              <div class="input-row">
+                <div class="form-group"><label for="invoice-no">Invoice Number</label><input type="text" id="invoice-no" placeholder="INV-001"></div>
+                <div class="form-group"><label for="gst-rate">GST/Tax Rate (%)</label><input type="number" id="gst-rate" value="18" min="0" max="100"></div>
+              </div>
+              <div style="margin-bottom:20px;">
+                <label style="font-size:0.875rem;font-weight:600;margin-bottom:8px;display:block;">Invoice Items</label>
+                <div id="items-container">
+                  <div class="input-row item-row" style="margin-bottom:8px;">
+                    <div class="form-group"><input type="text" class="item-desc" placeholder="Item description" style="width:100%;"></div>
+                    <div class="form-group" style="max-width:100px;"><input type="number" class="item-qty" placeholder="Qty" value="1" min="1" style="width:100%;"></div>
+                    <div class="form-group" style="max-width:120px;"><input type="number" class="item-price" placeholder="Price" min="0" step="0.01" style="width:100%;"></div>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-sm btn-secondary" id="add-item-btn" style="margin-top:8px;"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> Add Item</button>
+              </div>
+              <button class="btn btn-primary btn-lg" id="generate-btn" style="width:100%;margin-bottom:20px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg> Generate Invoice</button>
+              <div id="result-area" style="display:none;">
+                <div class="results-area">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;"><h3>Invoice Preview</h3><button class="btn btn-sm btn-secondary" id="download-btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download HTML</button></div>
+                  <div id="invoice-preview" style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:40px;color:#000;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tool-info-section reveal"><h2>How to Use</h2><ol><li>Enter your company and client details</li><li>Add invoice items with quantities and prices</li><li>Set the GST/tax rate</li><li>Click 'Generate Invoice'</li><li>Preview and download as HTML</li></ol></div>
+            <div class="tool-info-section reveal"><h2>Features</h2><ul><li>Add multiple invoice line items</li><li>Automatic tax calculation</li><li>Professional invoice layout</li><li>Download as HTML file</li><li>Print-ready format</li><li>100% free</li></ul></div>
+            <div class="tool-info-section reveal"><h2>Benefits</h2><p>Create professional-looking invoices for your business without any design skills. Simply fill in the details and generate a clean, printable invoice.</p></div>
+            <div class="tool-info-section reveal"><h2>Frequently Asked Questions</h2><div class="accordion"><div class="accordion-item"><button class="accordion-header">Can I print the invoice? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="accordion-body"><p>Yes, the generated HTML invoice can be printed directly from your browser or saved as PDF.</p></div></div></div></div>
+          </div>
+          <aside class="tool-sidebar"><div class="sidebar-widget reveal"><h3>Related Tools</h3><a href="/tools/emi-calculator.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">EMI Calculator</span></a><a href="/tools/gst-calculator.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">GST Calculator</span></a><a href="/tools/meta-tag-generator.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">Meta Tag Generator</span></a></div></aside>
+        </div>
+      </div>
+    </div>
+  </main>
+<footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/" class="logo">MEGA STORE</a><p>Your all-in-one platform for free online tools.</p></div>
+        <div class="footer-column"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+        <div class="footer-column"><h4>Tools</h4><ul><li><a href="/tools/pdf-merger.html">PDF Merger</a></li><li><a href="/tools/image-compressor.html">Image Compressor</a></li><li><a href="/tools/qr-code-generator.html">QR Code</a></li></ul></div>
+        <div class="footer-column"><h4>Legal</h4><ul><li><a href="/privacy-policy.html">Privacy</a></li><li><a href="/terms-and-conditions.html">Terms</a></li><li><a href="/disclaimer.html">Disclaimer</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>MEGA STORE. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+<script>
+    (function(){
+      document.getElementById("invoice-date").value=new Date().toISOString().split("T")[0];
+      document.getElementById("add-item-btn").addEventListener("click",()=>{
+        const row=document.createElement("div");row.className="input-row item-row";row.style.marginBottom="8px";row.innerHTML='<div class="form-group"><input type="text" class="item-desc" placeholder="Item description" style="width:100%;"></div><div class="form-group" style="max-width:100px;"><input type="number" class="item-qty" placeholder="Qty" value="1" min="1" style="width:100%;"></div><div class="form-group" style="max-width:120px;"><input type="number" class="item-price" placeholder="Price" min="0" step="0.01" style="width:100%;"></div>';
+        document.getElementById("items-container").appendChild(row);
+      });
+      document.getElementById("generate-btn").addEventListener("click",()=>{
+        const company=document.getElementById("company-name").value,address=document.getElementById("company-address").value,client=document.getElementById("client-name").value,date=document.getElementById("invoice-date").value,invoiceNo=document.getElementById("invoice-no").value,gstRate=parseFloat(document.getElementById("gst-rate").value)||0;
+        if(!company||!client){alert("Company name and client name are required");return;}
+        const rows=document.querySelectorAll(".item-row");let items=[];let subtotal=0;
+        rows.forEach(r=>{const desc=r.querySelector(".item-desc").value,qty=parseFloat(r.querySelector(".item-qty").value)||0,price=parseFloat(r.querySelector(".item-price").value)||0;if(desc&&qty&&price){const total=qty*price;items.push({desc,qty,price,total});subtotal+=total;}});
+        if(!items.length){alert("Please add at least one item");return;}
+        const tax=subtotal*gstRate/100;const grandTotal=subtotal+tax;
+        let itemsHtml="";items.forEach(i=>{itemsHtml+=`<tr><td>${i.desc}</td><td style="text-align:center;">${i.qty}</td><td style="text-align:right;">Rs. ${i.price.toFixed(2)}</td><td style="text-align:right;">Rs. ${i.total.toFixed(2)}</td></tr>`;});
+        const html=`<div style="font-family:system-ui,sans-serif;max-width:700px;margin:0 auto;"><div style="display:flex;justify-content:space-between;border-bottom:2px solid #2563eb;padding-bottom:20px;margin-bottom:20px;"><div><h1 style="margin:0;color:#2563eb;font-size:1.75rem;">INVOICE</h1><p style="margin:4px 0 0;color:#666;">${company}</p><p style="margin:2px 0;color:#666;font-size:0.875rem;">${address||""}</p></div><div style="text-align:right;"><p style="margin:0;font-weight:600;">Invoice #: ${invoiceNo||"N/A"}</p><p style="margin:4px 0;color:#666;">Date: ${date||new Date().toLocaleDateString("en-IN")}</p></div></div><div style="margin-bottom:20px;"><p style="margin:0;color:#666;font-size:0.875rem;">Bill To:</p><p style="margin:4px 0;font-weight:600;">${client}</p></div><table style="width:100%;border-collapse:collapse;margin-bottom:20px;"><thead><tr style="background:#f5f5f5;"><th style="text-align:left;padding:10px;border-bottom:2px solid #ddd;">Description</th><th style="padding:10px;border-bottom:2px solid #ddd;">Qty</th><th style="text-align:right;padding:10px;border-bottom:2px solid #ddd;">Price</th><th style="text-align:right;padding:10px;border-bottom:2px solid #ddd;">Total</th></tr></thead><tbody>${itemsHtml}</tbody></table><div style="border-top:2px solid #ddd;padding-top:15px;text-align:right;"><p style="margin:4px 0;">Subtotal: <strong>Rs. ${subtotal.toFixed(2)}</strong></p><p style="margin:4px 0;">Tax (${gstRate}%): <strong>Rs. ${tax.toFixed(2)}</strong></p><p style="margin:8px 0;font-size:1.125rem;">Total: <strong style="color:#2563eb;">Rs. ${grandTotal.toFixed(2)}</strong></p></div></div>`;
+        document.getElementById("invoice-preview").innerHTML=html;document.getElementById("result-area").style.display="block";
+        document.getElementById("download-btn").addEventListener("click",()=>{const fullHtml=`<!DOCTYPE html><html><head><title>Invoice ${invoiceNo||""}</title></head><body style="padding:20px;">${html}</body></html>`;const blob=new Blob([fullHtml],{type:"text/html"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="invoice-"+(invoiceNo||"generated")+".html";a.click();});
+      });
+    })();
+    </script>
+</body>
+</html>

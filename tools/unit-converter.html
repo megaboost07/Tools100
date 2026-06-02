@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit Converter - Convert Length, Weight, Temperature Free | MEGA STORE</title>
+  <meta name="description" content="Free online unit converter. Convert length, weight, temperature, area, volume, and more between different units.">
+  <meta name="keywords" content="unit converter, length converter, weight converter, temperature converter, area converter, online converter">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mega-store.in/tools/unit-converter.html">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="logo">MEGA STORE</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/tools/pdf-merger.html">PDF Tools</a></li>
+        <li><a href="/tools/image-compressor.html">Image Tools</a></li>
+        <li><a href="/tools/emi-calculator.html">Calculators</a></li>
+        <li><a href="/tools/qr-code-generator.html">Generators</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+        <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="icon-btn" id="mobile-menu-close" style="position:absolute;top:16px;right:16px;" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="/">Home</a><a href="/">Tools</a><a href="/contact.html">Contact</a>
+  </div>
+  <main id="main-content">
+    <div class="breadcrumb"><div class="container"><a href="/">Home</a><span class="separator">/</span><span>Unit Converter</span></div></div>
+    <div class="tool-page">
+      <div class="container">
+        <div class="tool-layout">
+          <div class="tool-main">
+            <div class="tool-interface reveal">
+              <div class="tool-interface-header">
+                <div class="tool-icon-large" style="background:linear-gradient(135deg,rgba(79,70,229,0.1),rgba(79,70,229,0.05));">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                </div>
+                <div><h1>Unit Converter</h1><p>Convert between various units instantly</p></div>
+              </div>
+              <div class="form-group" style="margin-bottom:20px;">
+                <label for="unit-category">Category</label>
+                <select id="unit-category" style="width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--radius-md);background:var(--bg-card);font-size:1rem;">
+                  <option value="length">Length</option>
+                  <option value="weight">Weight</option>
+                  <option value="temperature">Temperature</option>
+                  <option value="area">Area</option>
+                  <option value="volume">Volume</option>
+                </select>
+              </div>
+              <div class="unit-converter-layout">
+                <div class="form-group">
+                  <label for="from-value">From</label>
+                  <input type="number" id="from-value" placeholder="Enter value" style="width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--radius-md);background:var(--bg-card);font-size:1rem;margin-bottom:8px;">
+                  <select id="from-unit" style="width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--radius-md);background:var(--bg-card);font-size:1rem;"></select>
+                </div>
+                <button class="swap-btn" id="swap-btn" title="Swap units"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 10h14l-4-4"/><path d="M17 14H3l4 4"/></svg></button>
+                <div class="form-group">
+                  <label for="to-value">To</label>
+                  <input type="number" id="to-value" placeholder="Result" readonly style="width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--radius-md);background:var(--bg-secondary);font-size:1rem;margin-bottom:8px;">
+                  <select id="to-unit" style="width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--radius-md);background:var(--bg-card);font-size:1rem;"></select>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-lg" id="convert-btn" style="width:100%;margin-top:20px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 6H3"/><path d="M10 12H3"/><path d="M10 18H3"/><circle cx="17" cy="15" r="3"/><path d="m21 19-1.9-1.9"/></svg> Convert</button>
+            </div>
+            <div class="tool-info-section reveal"><h2>How to Use</h2><ol><li>Select the category (Length, Weight, Temperature, Area, Volume)</li><li>Enter the value you want to convert</li><li>Select the source unit and target unit</li><li>Click 'Convert' to see the result</li><li>Use the swap button to reverse the conversion</li></ol></div>
+            <div class="tool-info-section reveal"><h2>Features</h2><ul><li>Convert between 20+ different units</li><li>Categories: Length, Weight, Temperature, Area, Volume</li><li>Swap units with one click</li><li>Accurate conversion factors</li><li>Instant results</li><li>100% free</li></ul></div>
+            <div class="tool-info-section reveal"><h2>Benefits</h2><p>Whether you're cooking, traveling, studying, or working on a project, our Unit Converter handles all common conversions between metric and imperial systems.</p></div>
+            <div class="tool-info-section reveal"><h2>Frequently Asked Questions</h2><div class="accordion"><div class="accordion-item"><button class="accordion-header">How accurate are the conversions? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="accordion-body"><p>We use standard international conversion factors with high precision. Results are accurate for everyday use.</p></div></div><div class="accordion-item"><button class="accordion-header">Can I convert between any units? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="accordion-body"><p>You can convert between any units within the same category (e.g., any length to any other length).</p></div></div></div></div>
+          </div>
+          <aside class="tool-sidebar"><div class="sidebar-widget reveal"><h3>Related Tools</h3><a href="/tools/emi-calculator.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">EMI Calculator</span></a><a href="/tools/gst-calculator.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">GST Calculator</span></a><a href="/tools/age-calculator.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">Age Calculator</span></a></div></aside>
+        </div>
+      </div>
+    </div>
+  </main>
+<footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/" class="logo">MEGA STORE</a><p>Your all-in-one platform for free online tools.</p></div>
+        <div class="footer-column"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+        <div class="footer-column"><h4>Tools</h4><ul><li><a href="/tools/pdf-merger.html">PDF Merger</a></li><li><a href="/tools/image-compressor.html">Image Compressor</a></li><li><a href="/tools/qr-code-generator.html">QR Code</a></li></ul></div>
+        <div class="footer-column"><h4>Legal</h4><ul><li><a href="/privacy-policy.html">Privacy</a></li><li><a href="/terms-and-conditions.html">Terms</a></li><li><a href="/disclaimer.html">Disclaimer</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>MEGA STORE. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+<script>
+    (function(){
+      const units={
+        length:{meters:1,kilometers:1000,centimeters:0.01,millimeters:0.001,miles:1609.34,yards:0.9144,feet:0.3048,inches:0.0254},
+        weight:{kilograms:1,grams:0.001,milligrams:1e-6,pounds:0.453592,ounces:0.0283495,tons:1000},
+        temperature:{Celsius:"C",Fahrenheit:"F",Kelvin:"K"},
+        area:{sqmeters:1,sqkilometers:1e6,sqfeet:0.092903,acres:4046.86,hectares:10000},
+        volume:{liters:1,milliliters:0.001,gallons:3.78541,cups:0.236588}
+      };
+      const unitNames={
+        length:{meters:"Meters",kilometers:"Kilometers",centimeters:"Centimeters",millimeters:"Millimeters",miles:"Miles",yards:"Yards",feet:"Feet",inches:"Inches"},
+        weight:{kilograms:"Kilograms",grams:"Grams",milligrams:"Milligrams",pounds:"Pounds",ounces:"Ounces",tons:"Metric Tons"},
+        temperature:{Celsius:"Celsius",Fahrenheit:"Fahrenheit",Kelvin:"Kelvin"},
+        area:{sqmeters:"Square Meters",sqkilometers:"Square Kilometers",sqfeet:"Square Feet",acres:"Acres",hectares:"Hectares"},
+        volume:{liters:"Liters",milliliters:"Milliliters",gallons:"Gallons (US)",cups:"Cups (US)"}
+      };
+      const category=document.getElementById("unit-category"),fromValue=document.getElementById("from-value"),fromUnit=document.getElementById("from-unit"),toValue=document.getElementById("to-value"),toUnit=document.getElementById("to-unit"),convertBtn=document.getElementById("convert-btn"),swapBtn=document.getElementById("swap-btn");
+      function populateUnits(){const cat=category.value;fromUnit.innerHTML="";toUnit.innerHTML="";Object.keys(unitNames[cat]).forEach(u=>{fromUnit.add(new Option(unitNames[cat][u],u));toUnit.add(new Option(unitNames[cat][u],u));});toUnit.selectedIndex=1;}
+      populateUnits();category.addEventListener("change",populateUnits);
+      convertBtn.addEventListener("click",()=>{const val=parseFloat(fromValue.value);if(isNaN(val))return;const cat=category.value,from=fromUnit.value,to=toUnit.value;let result;
+        if(cat==="temperature"){if(from===to)result=val;else if(from==="Celsius")result=to==="Fahrenheit"?val*9/5+32:val+273.15;else if(from==="Fahrenheit")result=to==="Celsius"?(val-32)*5/9:((val-32)*5/9)+273.15;else result=to==="Celsius"?val-273.15:(val-273.15)*9/5+32;}
+        else{const factorFrom=units[cat][from],factorTo=units[cat][to];result=val*factorFrom/factorTo;}
+        toValue.value=parseFloat(result.toFixed(6));
+      });
+      swapBtn.addEventListener("click",()=>{const temp=fromUnit.selectedIndex;fromUnit.selectedIndex=toUnit.selectedIndex;toUnit.selectedIndex=temp;const v=fromValue.value;fromValue.value=toValue.value;toValue.value=v;});
+    })();
+    </script>
+</body>
+</html>

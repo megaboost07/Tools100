@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta Tag Generator - Free SEO Meta Tags | MEGA STORE</title>
+  <meta name="description" content="Free online meta tag generator. Create SEO-friendly meta tags for your website including title, description, Open Graph, and Twitter cards.">
+  <meta name="keywords" content="meta tag generator, SEO meta tags, create meta tags, Open Graph tags, Twitter card generator">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mega-store.in/tools/meta-tag-generator.html">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="logo">MEGA STORE</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/tools/pdf-merger.html">PDF Tools</a></li>
+        <li><a href="/tools/image-compressor.html">Image Tools</a></li>
+        <li><a href="/tools/emi-calculator.html">Calculators</a></li>
+        <li><a href="/tools/qr-code-generator.html">Generators</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+        <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="icon-btn" id="mobile-menu-close" style="position:absolute;top:16px;right:16px;" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="/">Home</a><a href="/">Tools</a><a href="/contact.html">Contact</a>
+  </div>
+  <main id="main-content">
+    <div class="breadcrumb"><div class="container"><a href="/">Home</a><span class="separator">/</span><span>Meta Tag Generator</span></div></div>
+    <div class="tool-page">
+      <div class="container">
+        <div class="tool-layout">
+          <div class="tool-main">
+            <div class="tool-interface reveal">
+              <div class="tool-interface-header">
+                <div class="tool-icon-large" style="background:linear-gradient(135deg,rgba(2,132,199,0.1),rgba(2,132,199,0.05));">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                </div>
+                <div><h1>Meta Tag Generator</h1><p>Generate SEO-friendly meta tags</p></div>
+              </div>
+              <div class="input-row">
+                <div class="form-group"><label for="page-title">Page Title *</label><input type="text" id="page-title" placeholder="My Awesome Website" maxlength="60"></div>
+                <div class="form-group"><label for="page-desc">Meta Description *</label><input type="text" id="page-desc" placeholder="Description of your page" maxlength="160"></div>
+              </div>
+              <div class="input-row">
+                <div class="form-group"><label for="page-url">Page URL</label><input type="url" id="page-url" placeholder="https://example.com/page"></div>
+                <div class="form-group"><label for="author">Author</label><input type="text" id="author" placeholder="Your Name"></div>
+              </div>
+              <div class="input-row">
+                <div class="form-group"><label for="keywords">Keywords (comma separated)</label><input type="text" id="keywords" placeholder="keyword1, keyword2, keyword3"></div>
+                <div class="form-group"><label for="robots">Robots</label><select id="robots" style="width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:var(--radius-md);background:var(--bg-card);font-size:1rem;"><option value="index, follow">Index, Follow</option><option value="noindex, follow">No Index, Follow</option><option value="index, nofollow">Index, No Follow</option><option value="noindex, nofollow">No Index, No Follow</option></select></div>
+              </div>
+              <div class="checkbox-group" style="margin-bottom:20px;">
+                <label class="checkbox-item"><input type="checkbox" id="include-og" checked> Include Open Graph</label>
+                <label class="checkbox-item"><input type="checkbox" id="include-twitter" checked> Include Twitter Cards</label>
+              </div>
+              <button class="btn btn-primary btn-lg" id="generate-btn" style="width:100%;margin-bottom:20px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> Generate Meta Tags</button>
+              <div id="result-area" style="display:none;">
+                <div class="results-area">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;"><h3>Generated Meta Tags</h3><button class="btn btn-sm btn-secondary" id="copy-btn">Copy All</button></div>
+                  <pre id="meta-output" class="result-code" style="font-size:0.8125rem;max-height:500px;"></pre>
+                </div>
+              </div>
+            </div>
+            <div class="tool-info-section reveal"><h2>How to Use</h2><ol><li>Enter your page title and meta description</li><li>Fill in optional fields (URL, author, keywords)</li><li>Select robots directive</li><li>Choose which tag sets to include</li><li>Click 'Generate Meta Tags' and copy the HTML</li></ol></div>
+            <div class="tool-info-section reveal"><h2>Features</h2><ul><li>Generate title, description, keywords tags</li><li>Open Graph tags for social sharing</li><li>Twitter Card tags</li><li>Robots meta tag</li><li>Character count validation</li><li>100% free</li></ul></div>
+            <div class="tool-info-section reveal"><h2>Benefits</h2><p>Proper meta tags are crucial for SEO and social media sharing. Our generator ensures you have all the essential tags with proper formatting.</p></div>
+            <div class="tool-info-section reveal"><h2>Frequently Asked Questions</h2><div class="accordion"><div class="accordion-item"><button class="accordion-header">Where do I place these tags? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="accordion-body"><p>Copy and paste them inside the <head> section of your HTML document.</p></div></div></div></div>
+          </div>
+          <aside class="tool-sidebar"><div class="sidebar-widget reveal"><h3>Related Tools</h3><a href="/tools/sitemap-generator.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">Sitemap Generator</span></a><a href="/tools/robots-txt-generator.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">Robots.txt Generator</span></a></div></aside>
+        </div>
+      </div>
+    </div>
+  </main>
+<footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/" class="logo">MEGA STORE</a><p>Your all-in-one platform for free online tools.</p></div>
+        <div class="footer-column"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+        <div class="footer-column"><h4>Tools</h4><ul><li><a href="/tools/pdf-merger.html">PDF Merger</a></li><li><a href="/tools/image-compressor.html">Image Compressor</a></li><li><a href="/tools/qr-code-generator.html">QR Code</a></li></ul></div>
+        <div class="footer-column"><h4>Legal</h4><ul><li><a href="/privacy-policy.html">Privacy</a></li><li><a href="/terms-and-conditions.html">Terms</a></li><li><a href="/disclaimer.html">Disclaimer</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>MEGA STORE. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+<script>
+    (function(){
+      document.getElementById("generate-btn").addEventListener("click",()=>{
+        const title=document.getElementById("page-title").value,desc=document.getElementById("page-desc").value,url=document.getElementById("page-url").value,author=document.getElementById("author").value,keywords=document.getElementById("keywords").value,robots=document.getElementById("robots").value;
+        if(!title||!desc){alert("Title and description are required");return;}
+        const includeOg=document.getElementById("include-og").checked,includeTwitter=document.getElementById("include-twitter").checked;
+        let html=`&lt;!-- Primary Meta Tags --&gt;\n&lt;title&gt;${escapeHtml(title)}&lt;/title&gt;\n&lt;meta name="description" content="${escapeHtml(desc)}"&gt;\n&lt;meta name="robots" content="${robots}"&gt;\n`;
+        if(author)html+=`&lt;meta name="author" content="${escapeHtml(author)}"&gt;\n`;if(keywords)html+=`&lt;meta name="keywords" content="${escapeHtml(keywords)}"&gt;\n`;
+        if(includeOg&&url){html+=`\n&lt;!-- Open Graph / Facebook --&gt;\n&lt;meta property="og:type" content="website"&gt;\n&lt;meta property="og:url" content="${url}"&gt;\n&lt;meta property="og:title" content="${escapeHtml(title)}"&gt;\n&lt;meta property="og:description" content="${escapeHtml(desc)}"&gt;\n`;}
+        if(includeTwitter&&url){html+=`\n&lt;!-- Twitter --&gt;\n&lt;meta property="twitter:card" content="summary_large_image"&gt;\n&lt;meta property="twitter:url" content="${url}"&gt;\n&lt;meta property="twitter:title" content="${escapeHtml(title)}"&gt;\n&lt;meta property="twitter:description" content="${escapeHtml(desc)}"&gt;\n`;}
+        document.getElementById("meta-output").innerHTML=html.replace(/&lt;/g,"<").replace(/&gt;/g,">");document.getElementById("result-area").style.display="block";
+        document.getElementById("copy-btn").addEventListener("click",()=>{navigator.clipboard.writeText(document.getElementById("meta-output").innerText);});
+      });
+      function escapeHtml(t){return t.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+    })();
+    </script>
+</body>
+</html>

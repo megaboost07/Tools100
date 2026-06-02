@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Resizer - Resize Images Online Free | MEGA STORE</title>
+  <meta name="description" content="Free online image resizer. Resize your images to exact dimensions. Supports JPG, PNG, and WebP formats.">
+  <meta name="keywords" content="image resizer, resize image, change image size, image dimensions, free image resize">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mega-store.in/tools/image-resizer.html">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="logo">MEGA STORE</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/tools/pdf-merger.html">PDF Tools</a></li>
+        <li><a href="/tools/image-compressor.html">Image Tools</a></li>
+        <li><a href="/tools/emi-calculator.html">Calculators</a></li>
+        <li><a href="/tools/qr-code-generator.html">Generators</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+        <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="icon-btn" id="mobile-menu-close" style="position:absolute;top:16px;right:16px;" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="/">Home</a><a href="/">Tools</a><a href="/contact.html">Contact</a>
+  </div>
+  <main id="main-content">
+    <div class="breadcrumb"><div class="container"><a href="/">Home</a><span class="separator">/</span><span>Image Resizer</span></div></div>
+
+    <div class="tool-page">
+      <div class="container">
+        <div class="tool-layout">
+          <div class="tool-main">
+            <div class="tool-interface reveal">
+              <div class="tool-interface-header">
+                <div class="tool-icon-large" style="background:linear-gradient(135deg,rgba(22,163,74,0.1),rgba(22,163,74,0.05));">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                </div>
+                <div><h1>Image Resizer</h1><p>Resize images to exact dimensions</p></div>
+              </div>
+              <div class="upload-area" id="drop-zone">
+                <input type="file" id="img-input" accept="image/*" aria-label="Select image to resize">
+                <div class="upload-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m21 21-6-6"/><path d="m3 3 6 6"/><path d="M3 9V3h6"/><path d="M21 15v6h-6"/></svg></div>
+                <h3>Upload Image</h3><p>Drag and drop an image here or click to browse</p>
+              </div>
+              <div id="resize-options" style="display:none;margin-top:20px;">
+                <div class="input-row">
+                  <div class="form-group"><label for="width">Width (px)</label><input type="number" id="width" placeholder="Width" min="1"></div>
+                  <div class="form-group"><label for="height">Height (px)</label><input type="number" id="height" placeholder="Height" min="1"></div>
+                </div>
+                <label class="checkbox-item" style="margin-bottom:16px;"><input type="checkbox" id="maintain-ratio" checked> Maintain aspect ratio</label>
+                <div id="img-info" style="margin-bottom:16px;padding:12px;background:var(--bg-secondary);border-radius:8px;font-size:0.875rem;"></div>
+                <div class="actions-row">
+                  <button class="btn btn-primary" id="resize-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21 21-6-6"/><path d="m3 3 6 6"/><path d="M21 3l-6 6"/><path d="M3 21l6-6"/></svg> Resize Image</button>
+                  <a class="btn btn-secondary" id="download-link" style="display:none;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download</a>
+                </div>
+                <canvas id="preview-canvas" style="display:none;margin-top:20px;max-width:100%;border-radius:8px;border:1px solid var(--border);"></canvas>
+              </div>
+            </div>
+
+            <div class="tool-info-section reveal">
+              <h2>How to Use</h2>
+              <ol><li>Upload your image using the upload area or drag and drop</li><li>Enter your desired width and height in pixels</li><li>Check 'Maintain aspect ratio' to keep proportions</li><li>Click the 'Resize Image' button</li><li>Download your resized image</li></ol>
+            </div>
+
+            <div class="tool-info-section reveal">
+              <h2>Features</h2>
+              <ul><li>Resize to exact pixel dimensions</li><li>Maintain aspect ratio option</li><li>Supports JPG, PNG, WebP</li><li>Preview before downloading</li><li>Browser-based processing</li><li>100% free</li></ul>
+            </div>
+
+            <div class="tool-info-section reveal">
+              <h2>Benefits</h2>
+              <p>Our Image Resizer is perfect for preparing images for websites, social media, email attachments, or any situation where you need specific dimensions. Keep your aspect ratio intact or set custom proportions.</p>
+            </div>
+
+            <div class="tool-info-section reveal">
+              <h2>Frequently Asked Questions</h2>
+              <div class="accordion"><div class="accordion-item"><button class="accordion-header">Will resizing reduce image quality? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="accordion-body"><p>Enlarging images beyond their original size may reduce quality. Shrinking maintains quality. We use high-quality resizing algorithms for best results.</p></div></div><div class="accordion-item"><button class="accordion-header">Can I resize multiple images? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="accordion-body"><p>Currently, we process one image at a time for the best user experience. Simply repeat the process for additional images.</p></div></div><div class="accordion-item"><button class="accordion-header">What formats are supported? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="accordion-body"><p>JPG, PNG, GIF, BMP, and WebP images are supported for resizing.</p></div></div></div>
+            </div>
+          </div>
+
+          <aside class="tool-sidebar">
+            <div class="sidebar-widget reveal"><h3>Related Tools</h3><a href="/tools/image-compressor.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">Image Compressor</span></a><a href="/tools/png-to-jpg.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">PNG to JPG</span></a><a href="/tools/webp-converter.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">WebP Converter</span></a></div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+<footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/" class="logo">MEGA STORE</a><p>Your all-in-one platform for free online tools.</p></div>
+        <div class="footer-column"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+        <div class="footer-column"><h4>Tools</h4><ul><li><a href="/tools/pdf-merger.html">PDF Merger</a></li><li><a href="/tools/image-compressor.html">Image Compressor</a></li><li><a href="/tools/qr-code-generator.html">QR Code</a></li></ul></div>
+        <div class="footer-column"><h4>Legal</h4><ul><li><a href="/privacy-policy.html">Privacy</a></li><li><a href="/terms-and-conditions.html">Terms</a></li><li><a href="/disclaimer.html">Disclaimer</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>MEGA STORE. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+<script>
+    (function(){
+      const dropZone=document.getElementById("drop-zone"),imgInput=document.getElementById("img-input"),resizeOptions=document.getElementById("resize-options"),widthInput=document.getElementById("width"),heightInput=document.getElementById("height"),maintainRatio=document.getElementById("maintain-ratio"),resizeBtn=document.getElementById("resize-btn"),downloadLink=document.getElementById("download-link"),previewCanvas=document.getElementById("preview-canvas"),imgInfo=document.getElementById("img-info");
+      let currentFile=null,imgWidth=0,imgHeight=0,aspectRatio=1;
+      dropZone.addEventListener("dragover",e=>{e.preventDefault();dropZone.classList.add("drag-over");});
+      dropZone.addEventListener("dragleave",()=>dropZone.classList.remove("drag-over"));
+      dropZone.addEventListener("drop",e=>{e.preventDefault();dropZone.classList.remove("drag-over");if(e.dataTransfer.files.length)loadImage(e.dataTransfer.files[0]);});
+      imgInput.addEventListener("change",()=>{if(imgInput.files.length)loadImage(imgInput.files[0]);});
+      function loadImage(file){currentFile=file;const img=new Image(),url=URL.createObjectURL(file);img.onload=()=>{imgWidth=img.width;imgHeight=img.height;aspectRatio=imgWidth/imgHeight;widthInput.value=imgWidth;heightInput.value=imgHeight;imgInfo.innerHTML="<strong>Original:</strong> "+imgWidth+" x "+imgHeight+" px<br><strong>Size:</strong> "+formatBytes(file.size);resizeOptions.style.display="block";dropZone.style.display="none";};img.src=url;}
+      widthInput.addEventListener("input",()=>{if(maintainRatio.checked){heightInput.value=Math.round(widthInput.value/aspectRatio);}});
+      heightInput.addEventListener("input",()=>{if(maintainRatio.checked){widthInput.value=Math.round(heightInput.value*aspectRatio);}});
+      resizeBtn.addEventListener("click",()=>{if(!currentFile)return;const w=parseInt(widthInput.value),h=parseInt(heightInput.value);if(!w||!h)return;const canvas=document.createElement("canvas");canvas.width=w;canvas.height=h;const ctx=canvas.getContext("2d");const img=new Image();img.onload=()=>{ctx.drawImage(img,0,0,w,h);const mimeType=currentFile.type==="image/png"?"image/png":"image/jpeg";canvas.toBlob(blob=>{previewCanvas.style.display="block";previewCanvas.src=URL.createObjectURL(blob);downloadLink.style.display="inline-flex";downloadLink.href=URL.createObjectURL(blob);downloadLink.download="resized_"+currentFile.name;},mimeType,0.92);};img.src=URL.createObjectURL(currentFile);});
+      function formatBytes(b){if(b===0)return"0 Bytes";const k=1024;const s=["Bytes","KB","MB"];const i=Math.floor(Math.log(b)/Math.log(k));return parseFloat((b/Math.pow(k,i)).toFixed(2))+" "+s[i];}
+    })();
+    </script>
+</body>
+</html>

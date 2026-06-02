@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JPG to PNG Converter - Convert JPG Images Free | MEGA STORE</title>
+  <meta name="description" content="Free online JPG to PNG converter. Convert your JPG images to PNG format with transparency support.">
+  <meta name="keywords" content="JPG to PNG, convert JPG to PNG, JPEG to PNG, image converter">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mega-store.in/tools/jpg-to-png.html">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/tools.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="logo">MEGA STORE</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/tools/pdf-merger.html">PDF Tools</a></li>
+        <li><a href="/tools/image-compressor.html">Image Tools</a></li>
+        <li><a href="/tools/emi-calculator.html">Calculators</a></li>
+        <li><a href="/tools/qr-code-generator.html">Generators</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+        <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="icon-btn" id="mobile-menu-close" style="position:absolute;top:16px;right:16px;" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="/">Home</a><a href="/">Tools</a><a href="/contact.html">Contact</a>
+  </div>
+  <main id="main-content">
+    <div class="breadcrumb"><div class="container"><a href="/">Home</a><span class="separator">/</span><span>JPG to PNG Converter</span></div></div>
+    <div class="tool-page">
+      <div class="container">
+        <div class="tool-layout">
+          <div class="tool-main">
+            <div class="tool-interface reveal">
+              <div class="tool-interface-header">
+                <div class="tool-icon-large" style="background:linear-gradient(135deg,rgba(22,163,74,0.1),rgba(22,163,74,0.05));">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                </div>
+                <div><h1>JPG to PNG Converter</h1><p>Convert JPG images to PNG format</p></div>
+              </div>
+              <div class="upload-area" id="drop-zone">
+                <input type="file" id="img-input" accept="image/jpeg,image/jpg" aria-label="Select JPG image to convert">
+                <div class="upload-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg></div>
+                <h3>Upload JPG Image</h3><p>Drag and drop a JPG image here or click to browse</p>
+              </div>
+              <div id="convert-options" style="display:none;margin-top:20px;">
+                <div id="img-info" style="margin-bottom:16px;padding:12px;background:var(--bg-secondary);border-radius:8px;font-size:0.875rem;"></div>
+                <canvas id="convert-canvas" style="display:none;"></canvas>
+                <div class="actions-row">
+                  <button class="btn btn-primary" id="convert-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg> Convert to PNG</button>
+                  <a class="btn btn-secondary" id="download-link" style="display:none;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download PNG</a>
+                </div>
+              </div>
+            </div>
+            <div class="tool-info-section reveal"><h2>How to Use</h2><ol><li>Upload your JPG image using the upload area</li><li>Click the 'Convert to PNG' button</li><li>Download your converted PNG image</li></ol></div>
+            <div class="tool-info-section reveal"><h2>Features</h2><ul><li>Convert JPG to PNG instantly</li><li>Lossless PNG quality output</li><li>All processing in browser</li><li>No file size limits</li><li>Maintains original dimensions</li><li>100% free</li></ul></div>
+            <div class="tool-info-section reveal"><h2>Benefits</h2><p>PNG format supports transparency and lossless compression, making it ideal for graphics, logos, and images that need editing. Convert JPG photos to PNG for better quality preservation.</p></div>
+            <div class="tool-info-section reveal"><h2>Frequently Asked Questions</h2><div class="accordion"><div class="accordion-item"><button class="accordion-header">Will the file size increase? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="accordion-body"><p>PNG files are typically larger than JPG for photos, but offer better quality for graphics and text.</p></div></div><div class="accordion-item"><button class="accordion-header">Can I add transparency? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button><div class="accordion-body"><p>The converted PNG will have a solid background. To add transparency, use an image editor after conversion.</p></div></div></div></div>
+          </div>
+          <aside class="tool-sidebar"><div class="sidebar-widget reveal"><h3>Related Tools</h3><a href="/tools/png-to-jpg.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">PNG to JPG</span></a><a href="/tools/image-compressor.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">Image Compressor</span></a><a href="/tools/webp-converter.html" class="related-tool"><div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></div><span class="rt-name">WebP Converter</span></a></div></aside>
+        </div>
+      </div>
+    </div>
+  </main>
+<footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/" class="logo">MEGA STORE</a><p>Your all-in-one platform for free online tools.</p></div>
+        <div class="footer-column"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+        <div class="footer-column"><h4>Tools</h4><ul><li><a href="/tools/pdf-merger.html">PDF Merger</a></li><li><a href="/tools/image-compressor.html">Image Compressor</a></li><li><a href="/tools/qr-code-generator.html">QR Code</a></li></ul></div>
+        <div class="footer-column"><h4>Legal</h4><ul><li><a href="/privacy-policy.html">Privacy</a></li><li><a href="/terms-and-conditions.html">Terms</a></li><li><a href="/disclaimer.html">Disclaimer</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>MEGA STORE. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+<script>
+    (function(){
+      const dropZone=document.getElementById("drop-zone"),imgInput=document.getElementById("img-input"),convertOptions=document.getElementById("convert-options"),convertBtn=document.getElementById("convert-btn"),downloadLink=document.getElementById("download-link"),imgInfo=document.getElementById("img-info"),canvas=document.getElementById("convert-canvas");
+      let currentFile=null;
+      dropZone.addEventListener("dragover",e=>{e.preventDefault();dropZone.classList.add("drag-over");});
+      dropZone.addEventListener("dragleave",()=>dropZone.classList.remove("drag-over"));
+      dropZone.addEventListener("drop",e=>{e.preventDefault();dropZone.classList.remove("drag-over");if(e.dataTransfer.files.length)loadImage(e.dataTransfer.files[0]);});
+      imgInput.addEventListener("change",()=>{if(imgInput.files.length)loadImage(imgInput.files[0]);});
+      function loadImage(file){currentFile=file;const img=new Image(),url=URL.createObjectURL(file);img.onload=()=>{canvas.width=img.width;canvas.height=img.height;canvas.getContext("2d").drawImage(img,0,0);imgInfo.innerHTML="<strong>Original:</strong> "+img.width+" x "+img.height+" px<br><strong>Size:</strong> "+formatBytes(file.size);convertOptions.style.display="block";dropZone.style.display="none";};img.src=url;}
+      convertBtn.addEventListener("click",()=>{if(!currentFile)return;canvas.toBlob(blob=>{downloadLink.style.display="inline-flex";downloadLink.href=URL.createObjectURL(blob);downloadLink.download=currentFile.name.replace(/\.(jpg|jpeg)$/i,".png");},"image/png");});
+      function formatBytes(b){if(b===0)return"0 Bytes";const k=1024,s=["Bytes","KB","MB"],i=Math.floor(Math.log(b)/Math.log(k));return parseFloat((b/Math.pow(k,i)).toFixed(2))+" "+s[i];}
+    })();
+    </script>
+</body>
+</html>

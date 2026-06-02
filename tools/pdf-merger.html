@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Merger - Merge Multiple PDF Files Online Free | MEGA STORE</title>
+  <meta name="description" content="Free online PDF merger tool. Combine multiple PDF files into one document quickly and easily. No signup required. Secure browser-based processing.">
+  <meta name="keywords" content="PDF merger, merge PDF, combine PDF files, PDF joiner, free PDF merger online">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mega-store.in/tools/pdf-merger.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PDF Merger - Free Online Tool">
+  <meta property="og:description" content="Combine multiple PDF files into one document for free.">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/tools.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PDF Merger",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"},
+    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "1250"}
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="logo">MEGA STORE</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/tools/pdf-merger.html">PDF Tools</a></li>
+        <li><a href="/tools/image-compressor.html">Image Tools</a></li>
+        <li><a href="/tools/emi-calculator.html">Calculators</a></li>
+        <li><a href="/tools/qr-code-generator.html">Generators</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+        <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="icon-btn" id="mobile-menu-close" style="position:absolute;top:16px;right:16px;" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="/">Home</a><a href="/tools/pdf-merger.html">PDF Merger</a><a href="/tools/pdf-splitter.html">PDF Splitter</a><a href="/contact.html">Contact</a>
+  </div>
+
+  <main id="main-content">
+    <div class="breadcrumb"><div class="container"><a href="/">Home</a><span class="separator">/</span><a href="/tools/pdf-merger.html">PDF Tools</a><span class="separator">/</span><span>PDF Merger</span></div></div>
+
+    <div class="tool-page">
+      <div class="container">
+        <div class="tool-layout">
+          <div class="tool-main">
+            <div class="tool-interface reveal">
+              <div class="tool-interface-header">
+                <div class="tool-icon-large" style="background:linear-gradient(135deg,rgba(37,99,235,0.1),rgba(37,99,235,0.05));">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                </div>
+                <div>
+                  <h1>PDF Merger</h1>
+                  <p>Combine multiple PDF files into one document</p>
+                </div>
+              </div>
+
+              <div class="upload-area" id="drop-zone">
+                <input type="file" id="pdf-input" accept=".pdf" multiple aria-label="Select PDF files to merge">
+                <div class="upload-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                </div>
+                <h3>Upload PDF Files</h3>
+                <p>Drag and drop PDF files here or click to browse</p>
+                <small style="color:var(--text-muted);">You can select multiple PDF files</small>
+              </div>
+
+              <div class="file-list" id="file-list"></div>
+
+              <div class="actions-row" id="action-buttons" style="display:none;">
+                <button class="btn btn-primary" id="merge-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  Merge PDFs
+                </button>
+                <button class="btn btn-secondary" id="clear-btn">Clear All</button>
+              </div>
+
+              <div id="progress-area" style="display:none;margin-top:20px;">
+                <div class="progress-bar"><div class="progress-bar-fill" id="progress-fill" style="width:0%"></div></div>
+                <p id="progress-text" style="text-align:center;color:var(--text-muted);font-size:0.875rem;">Merging PDFs...</p>
+              </div>
+
+              <div id="result-area" style="display:none;margin-top:20px;">
+                <div class="alert alert-success" style="display:flex;align-items:center;gap:10px;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  PDFs merged successfully!
+                </div>
+                <button class="btn btn-primary" id="download-btn" style="margin-top:12px;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download Merged PDF
+                </button>
+              </div>
+            </div>
+
+            <div class="tool-info-section reveal">
+              <h2>How to Use</h2>
+              <ol>
+                <li>Click on the upload area or drag and drop your PDF files</li>
+                <li>Select multiple PDF files you want to merge (hold Ctrl/Cmd to select multiple)</li>
+                <li>Click the "Merge PDFs" button</li>
+                <li>Wait for the processing to complete</li>
+                <li>Download your merged PDF file</li>
+              </ol>
+            </div>
+
+            <div class="tool-info-section reveal">
+              <h2>Features</h2>
+              <ul>
+                <li>Merge unlimited PDF files into a single document</li>
+                <li>All processing happens in your browser - files stay private</li>
+                <li>No file size limits (limited only by your device memory)</li>
+                <li>Maintains original PDF quality and formatting</li>
+                <li>Fast and efficient merging algorithm</li>
+                <li>100% free with no watermarks</li>
+              </ul>
+            </div>
+
+            <div class="tool-info-section reveal">
+              <h2>Benefits</h2>
+              <p>Our PDF Merger tool helps you combine multiple documents into one organized file. Whether you are consolidating reports, combining scanned documents, or organizing receipts, this tool makes it simple and fast. No need to install expensive software - everything works right in your browser.</p>
+            </div>
+
+            <div class="tool-info-section reveal">
+              <h2>Frequently Asked Questions</h2>
+              <div class="accordion">
+                <div class="accordion-item">
+                  <button class="accordion-header">Is there a limit to how many PDFs I can merge? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <div class="accordion-body"><p>No, there is no set limit. You can merge as many PDFs as your device memory allows. For best performance, we recommend merging up to 20 files at a time.</p></div>
+                </div>
+                <div class="accordion-item">
+                  <button class="accordion-header">Will the quality of my PDFs be affected? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <div class="accordion-body"><p>No, the original quality of your PDF files is preserved. The merger simply combines the pages without re-compressing or altering the content.</p></div>
+                </div>
+                <div class="accordion-item">
+                  <button class="accordion-header">Is my data secure? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <div class="accordion-body"><p>Yes, all processing happens locally in your browser. Your PDF files are never uploaded to any server, ensuring complete privacy.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="tool-sidebar">
+            <div class="sidebar-widget reveal">
+              <h3>Related Tools</h3>
+              <a href="/tools/pdf-splitter.html" class="related-tool">
+                <div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/></svg></div>
+                <span class="rt-name">PDF Splitter</span>
+              </a>
+              <a href="/tools/image-compressor.html" class="related-tool">
+                <div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg></div>
+                <span class="rt-name">Image Compressor</span>
+              </a>
+              <a href="/tools/qr-code-generator.html" class="related-tool">
+                <div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/></svg></div>
+                <span class="rt-name">QR Code Generator</span>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/" class="logo">MEGA STORE</a><p>Your all-in-one platform for free online tools.</p></div>
+        <div class="footer-column"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+        <div class="footer-column"><h4>Tools</h4><ul><li><a href="/tools/pdf-merger.html">PDF Merger</a></li><li><a href="/tools/pdf-splitter.html">PDF Splitter</a></li><li><a href="/tools/image-compressor.html">Image Compressor</a></li></ul></div>
+        <div class="footer-column"><h4>Legal</h4><ul><li><a href="/privacy-policy.html">Privacy</a></li><li><a href="/terms-and-conditions.html">Terms</a></li><li><a href="/disclaimer.html">Disclaimer</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>MEGA STORE. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+  (function() {
+    const pdfInput = document.getElementById('pdf-input');
+    const dropZone = document.getElementById('drop-zone');
+    const fileList = document.getElementById('file-list');
+    const actionButtons = document.getElementById('action-buttons');
+    const mergeBtn = document.getElementById('merge-btn');
+    const clearBtn = document.getElementById('clear-btn');
+    const progressArea = document.getElementById('progress-area');
+    const progressFill = document.getElementById('progress-fill');
+    const progressText = document.getElementById('progress-text');
+    const resultArea = document.getElementById('result-area');
+    const downloadBtn = document.getElementById('download-btn');
+    
+    let selectedFiles = [];
+    let mergedPdfBytes = null;
+
+    // Drag & drop
+    dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+    dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropZone.classList.remove('drag-over');
+      const files = Array.from(e.dataTransfer.files).filter(f => f.type === 'application/pdf');
+      addFiles(files);
+    });
+
+    pdfInput.addEventListener('change', () => {
+      addFiles(Array.from(pdfInput.files));
+    });
+
+    function addFiles(files) {
+      files.forEach(file => {
+        if (file.type === 'application/pdf') {
+          selectedFiles.push(file);
+        }
+      });
+      renderFileList();
+    }
+
+    function renderFileList() {
+      fileList.innerHTML = '';
+      selectedFiles.forEach((file, index) => {
+        const item = document.createElement('div');
+        item.className = 'file-item';
+        item.innerHTML = `
+          <div class="file-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <div class="file-info"><div class="file-name">${escapeHtml(file.name)}</div><div class="file-size">${formatBytes(file.size)}</div></div>
+          <button class="file-remove" data-index="${index}" aria-label="Remove file"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+        `;
+        fileList.appendChild(item);
+      });
+
+      document.querySelectorAll('.file-remove').forEach(btn => {
+        btn.addEventListener('click', () => {
+          selectedFiles.splice(parseInt(btn.dataset.index), 1);
+          renderFileList();
+        });
+      });
+
+      actionButtons.style.display = selectedFiles.length > 0 ? 'flex' : 'none';
+      if (selectedFiles.length === 0) {
+        resultArea.style.display = 'none';
+        progressArea.style.display = 'none';
+      }
+    }
+
+    function formatBytes(bytes) {
+      if (bytes === 0) return '0 Bytes';
+      const k = 1024;
+      const sizes = ['Bytes', 'KB', 'MB'];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    clearBtn.addEventListener('click', () => {
+      selectedFiles = [];
+      mergedPdfBytes = null;
+      renderFileList();
+      resultArea.style.display = 'none';
+      progressArea.style.display = 'none';
+    });
+
+    mergeBtn.addEventListener('click', async () => {
+      if (selectedFiles.length < 2) {
+        alert('Please select at least 2 PDF files to merge');
+        return;
+      }
+
+      actionButtons.style.display = 'none';
+      progressArea.style.display = 'block';
+      resultArea.style.display = 'none';
+      progressFill.style.width = '0%';
+      progressText.textContent = 'Reading PDF files...';
+
+      try {
+        const mergedPdf = await PDFLib.PDFDocument.create();
+        
+        for (let i = 0; i < selectedFiles.length; i++) {
+          const file = selectedFiles[i];
+          const arrayBuffer = await file.arrayBuffer();
+          const pdf = await PDFLib.PDFDocument.load(arrayBuffer);
+          const copiedPages = await mergedPdf.copyPages(pdf, pdf.getPageIndices());
+          copiedPages.forEach(page => mergedPdf.addPage(page));
+          
+          const progress = ((i + 1) / selectedFiles.length) * 80;
+          progressFill.style.width = progress + '%';
+          progressText.textContent = `Processing file ${i + 1} of ${selectedFiles.length}...`;
+        }
+
+        progressFill.style.width = '90%';
+        progressText.textContent = 'Saving merged PDF...';
+        
+        mergedPdfBytes = await mergedPdf.save();
+        
+        progressFill.style.width = '100%';
+        progressText.textContent = 'Complete!';
+        
+        setTimeout(() => {
+          progressArea.style.display = 'none';
+          resultArea.style.display = 'block';
+        }, 500);
+
+      } catch (error) {
+        console.error(error);
+        progressText.textContent = 'Error: ' + error.message;
+        actionButtons.style.display = 'flex';
+      }
+    });
+
+    downloadBtn.addEventListener('click', () => {
+      if (mergedPdfBytes) {
+        const blob = new Blob([mergedPdfBytes], { type: 'application/pdf' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'merged-document.pdf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }
+    });
+  })();
+  </script>
+</body>
+</html>

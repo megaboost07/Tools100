@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Splitter - Split PDF Pages Online Free | MEGA STORE</title>
+  <meta name="description" content="Free online PDF splitter tool. Split PDF files into individual pages or extract specific page ranges. No signup required.">
+  <meta name="keywords" content="PDF splitter, split PDF, extract PDF pages, PDF page extractor">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mega-store.in/tools/pdf-splitter.html">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/tools.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="/" class="logo">MEGA STORE</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/tools/pdf-merger.html">PDF Tools</a></li>
+        <li><a href="/tools/image-compressor.html">Image Tools</a></li>
+        <li><a href="/tools/emi-calculator.html">Calculators</a></li>
+        <li><a href="/tools/qr-code-generator.html">Generators</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+        <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="icon-btn" id="mobile-menu-close" style="position:absolute;top:16px;right:16px;" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="/">Home</a><a href="/tools/pdf-merger.html">PDF Merger</a><a href="/tools/pdf-splitter.html">PDF Splitter</a><a href="/contact.html">Contact</a>
+  </div>
+
+  <main id="main-content">
+    <div class="breadcrumb"><div class="container"><a href="/">Home</a><span class="separator">/</span><a href="/tools/pdf-merger.html">PDF Tools</a><span class="separator">/</span><span>PDF Splitter</span></div></div>
+
+    <div class="tool-page">
+      <div class="container">
+        <div class="tool-layout">
+          <div class="tool-main">
+            <div class="tool-interface reveal">
+              <div class="tool-interface-header">
+                <div class="tool-icon-large" style="background:linear-gradient(135deg,rgba(37,99,235,0.1),rgba(37,99,235,0.05));">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                </div>
+                <div>
+                  <h1>PDF Splitter</h1>
+                  <p>Split PDF files into individual pages or extract ranges</p>
+                </div>
+              </div>
+
+              <div class="upload-area" id="drop-zone">
+                <input type="file" id="pdf-input" accept=".pdf" aria-label="Select PDF file to split">
+                <div class="upload-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                </div>
+                <h3>Upload PDF File</h3>
+                <p>Drag and drop a PDF file here or click to browse</p>
+              </div>
+
+              <div id="split-options" style="display:none;margin-top:20px;">
+                <div class="form-group">
+                  <label>Split Mode</label>
+                  <div class="checkbox-group">
+                    <label class="checkbox-item"><input type="radio" name="split-mode" value="all" checked> All Pages (individual)</label>
+                    <label class="checkbox-item"><input type="radio" name="split-mode" value="range"> Page Range</label>
+                  </div>
+                </div>
+                <div class="form-group" id="range-input" style="display:none;">
+                  <label for="page-range">Page Range (e.g., 1-3,5,7-9)</label>
+                  <input type="text" id="page-range" placeholder="1-3,5,7-9">
+                </div>
+                <div id="file-info" style="margin-bottom:16px;padding:12px;background:var(--bg-secondary);border-radius:8px;font-size:0.875rem;"></div>
+                <button class="btn btn-primary" id="split-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h3v3h-3z"/><path d="M8 3h3v3H8z"/><path d="M5 3h3v3H5z"/><path d="M3 8h18v13H3z"/></svg>
+                  Split PDF
+                </button>
+              </div>
+
+              <div id="result-area" style="display:none;margin-top:20px;"></div>
+            </div>
+
+            <div class="tool-info-section reveal">
+              <h2>How to Use</h2>
+              <ol>
+                <li>Upload your PDF file using the upload area or drag and drop</li>
+                <li>Choose your split mode: extract all pages individually or specify a page range</li>
+                <li>Enter page range if needed (e.g., 1-3,5,7-9)</li>
+                <li>Click the 'Split PDF' button</li>
+                <li>Download your split PDF files</li>
+              </ol>
+            </div>
+
+            <div class="tool-info-section reveal">
+              <h2>Features</h2>
+              <ul>
+                <li>Split PDFs into individual pages</li>
+                <li>Extract specific page ranges</li>
+                <li>All processing in browser - no upload</li>
+                <li>Download pages individually</li>
+                <li>Preserves original quality</li>
+                <li>100% free</li>
+              </ul>
+            </div>
+
+            <div class="tool-info-section reveal">
+              <h2>Benefits</h2>
+              <p>Our PDF Splitter is perfect when you need to separate specific pages from a large document, extract chapters, or break a document into smaller parts for sharing.</p>
+            </div>
+
+            <div class="tool-info-section reveal">
+              <h2>Frequently Asked Questions</h2>
+              <div class="accordion">
+                <div class="accordion-item">
+                  <button class="accordion-header">Can I split password-protected PDFs? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <div class="accordion-body"><p>No, password-protected PDFs need to be unlocked first before splitting.</p></div>
+                </div>
+                <div class="accordion-item">
+                  <button class="accordion-header">Will the quality be affected? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <div class="accordion-body"><p>No, the original quality is preserved as pages are extracted without re-compression.</p></div>
+                </div>
+                <div class="accordion-item">
+                  <button class="accordion-header">Is there a page limit? <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <div class="accordion-body"><p>There is no set limit, but very large PDFs may take longer to process depending on your device.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="tool-sidebar">
+            <div class="sidebar-widget reveal">
+              <h3>Related Tools</h3>
+              <a href="/tools/pdf-merger.html" class="related-tool">
+                <div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
+                <span class="rt-name">PDF Merger</span>
+              </a>
+              <a href="/tools/image-compressor.html" class="related-tool">
+                <div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg></div>
+                <span class="rt-name">Image Compressor</span>
+              </a>
+              <a href="/tools/image-resizer.html" class="related-tool">
+                <div class="rt-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m21 21-6-6"/><path d="m3 3 6 6"/><path d="M3 9V3h6"/><path d="M21 15v6h-6"/></svg></div>
+                <span class="rt-name">Image Resizer</span>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/" class="logo">MEGA STORE</a><p>Your all-in-one platform for free online tools.</p></div>
+        <div class="footer-column"><h4>Quick Links</h4><ul><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+        <div class="footer-column"><h4>Tools</h4><ul><li><a href="/tools/pdf-merger.html">PDF Merger</a></li><li><a href="/tools/pdf-splitter.html">PDF Splitter</a></li><li><a href="/tools/image-compressor.html">Image Compressor</a></li></ul></div>
+        <div class="footer-column"><h4>Legal</h4><ul><li><a href="/privacy-policy.html">Privacy</a></li><li><a href="/terms-and-conditions.html">Terms</a></li><li><a href="/disclaimer.html">Disclaimer</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>MEGA STORE. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+  (function() {
+    const dropZone = document.getElementById('drop-zone');
+    const pdfInput = document.getElementById('pdf-input');
+    const splitOptions = document.getElementById('split-options');
+    const rangeInput = document.getElementById('range-input');
+    const splitBtn = document.getElementById('split-btn');
+    const resultArea = document.getElementById('result-area');
+    let currentPdf = null;
+    let currentFileName = '';
+
+    dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('drag-over'); });
+    dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault(); dropZone.classList.remove('drag-over');
+      const files = Array.from(e.dataTransfer.files).filter(f => f.type === 'application/pdf');
+      if (files.length) loadPdf(files[0]);
+    });
+
+    pdfInput.addEventListener('change', () => {
+      if (pdfInput.files.length) loadPdf(pdfInput.files[0]);
+    });
+
+    async function loadPdf(file) {
+      currentFileName = file.name.replace('.pdf', '');
+      const arrayBuffer = await file.arrayBuffer();
+      currentPdf = await PDFLib.PDFDocument.load(arrayBuffer);
+      const pageCount = currentPdf.getPageCount();
+      document.getElementById('file-info').innerHTML = '<strong>File:</strong> ' + escapeHtml(file.name) + '<br><strong>Pages:</strong> ' + pageCount;
+      splitOptions.style.display = 'block';
+      dropZone.style.display = 'none';
+    }
+
+    document.querySelectorAll('input[name="split-mode"]').forEach(radio => {
+      radio.addEventListener('change', () => {
+        rangeInput.style.display = radio.value === 'range' ? 'block' : 'none';
+      });
+    });
+
+    splitBtn.addEventListener('click', async () => {
+      if (!currentPdf) return;
+      const mode = document.querySelector('input[name="split-mode"]:checked').value;
+      resultArea.innerHTML = '<div class="spinner" style="margin:20px auto;"></div><p style="text-align:center;color:var(--text-muted);">Splitting PDF...</p>';
+      resultArea.style.display = 'block';
+
+      try {
+        const pageCount = currentPdf.getPageCount();
+        const pagesToExtract = [];
+
+        if (mode === 'all') {
+          for (let i = 0; i < pageCount; i++) pagesToExtract.push([i]);
+        } else {
+          const rangeStr = document.getElementById('page-range').value;
+          if (!rangeStr) { alert('Please enter a page range'); return; }
+          const parts = rangeStr.split(',');
+          parts.forEach(part => {
+            if (part.includes('-')) {
+              const [start, end] = part.split('-').map(Number);
+              const pages = [];
+              for (let i = start - 1; i < end && i < pageCount; i++) pages.push(i);
+              if (pages.length) pagesToExtract.push(pages);
+            } else {
+              const page = Number(part) - 1;
+              if (page >= 0 && page < pageCount) pagesToExtract.push([page]);
+            }
+          });
+        }
+
+        resultArea.innerHTML = '<h3 style="margin-bottom:16px;">Download Split Pages</h3>';
+
+        for (let i = 0; i < pagesToExtract.length; i++) {
+          const newPdf = await PDFLib.PDFDocument.create();
+          const copiedPages = await newPdf.copyPages(currentPdf, pagesToExtract[i]);
+          copiedPages.forEach(p => newPdf.addPage(p));
+          const pdfBytes = await newPdf.save();
+          const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+          const url = URL.createObjectURL(blob);
+          const pageLabel = pagesToExtract[i].length === 1 ? 'Page ' + (pagesToExtract[i][0] + 1) : 'Pages ' + (pagesToExtract[i][0] + 1) + '-' + (pagesToExtract[i][pagesToExtract[i].length - 1] + 1);
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = currentFileName + '_' + pageLabel.replace(/\s/g, '_') + '.pdf';
+          link.className = 'btn btn-secondary btn-sm';
+          link.style.cssText = 'display:inline-flex;margin:4px;';
+          link.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download ' + pageLabel;
+          resultArea.appendChild(link);
+        }
+      } catch (error) {
+        resultArea.innerHTML = '<div class="alert alert-error">Error: ' + error.message + '</div>';
+      }
+    });
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+  })();
+  </script>
+</body>
+</html>
